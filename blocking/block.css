@@ -1,0 +1,20 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: grey;
+  text-align: center;
+  margin-top: 40vh;
+  color: white;
+}
+
+a[id="moretime"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+a[id="moretime"]:hover {
+  background-color: #45a049;
+}

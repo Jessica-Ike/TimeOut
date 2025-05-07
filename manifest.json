@@ -1,0 +1,30 @@
+{
+  "name": "Time Out!",
+  "description": "Once the timer is up, the extension will notify you to take a break and block the website.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": [
+    "storage",
+    "tabs",
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["blocking/block.html", "blocking/block.css", "blocking/block.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Timer Popup</title>
+    <link rel="stylesheet" href="./popup.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <h1 class="header">Time Out!</h1>
+    <div class="tab">
+      <button class="tablinks" id="btnHome" data-page="Home">Add Limit</button>
+      <button class="tablinks" id="btnManage" data-page="Manage">Manage</button>
+    </div>
+
+    <div id="Home" class="tabcontent">
+      <h2 class="header">Add a timer</h2>
+      <form id="timerForm">
+        <label for="url">Webpage URL:</label>
+        <input class="website" type="text" id="url" name="url" placeholder="Enter URL or leave blank for current page" />
+        <label for="times">Set a limit:</label>
+        <select name="times" id="times">
+          <option value="15sec">15 seconds</option>
+          <option value="1min">1 minute</option>
+          <option value="15min">15 minutes</option>
+          <option value="30min">30 minutes</option>
+          <option value="45min">45 minutes</option>
+          <option value="1h">1 hour</option>
+          <option value="1.5h">1.5 hours</option>
+          <option value="2h">2 hours</option>
+        </select>
+        <br>
+        <input type="submit" value="Set Timer">
+      </form>
+      <div id="message"></div>
+    </div>
+
+    <div id="Manage" class="tabcontent">
+      <div id="limits-container">
+        <h2>Your Time Limits</h2>
+        <ul id="limitList"></ul>
+      </div>
+    </div>
+
+    <div id="Edit" class="tabcontent">
+      <h2 class="header">Edit a limit</h2>
+      <form id="limitForm">
+        <label for="url">Webpage URL:</label>
+        <input class="website" type="text" id="editUrl" name="url"/>
+        <label for="times">Edit limit:</label>
+        <select name="times" id="editTimes">
+          <option value="15sec">15 seconds</option>
+          <option value="1min">1 minute</option>
+          <option value="15min">15 minutes</option>
+          <option value="30min">30 minutes</option>
+          <option value="45min">45 minutes</option>
+          <option value="1h">1 hour</option>
+          <option value="1.5h">1.5 hours</option>
+          <option value="2h">2 hours</option>
+        </select>
+        <br>
+        <input type="submit" id="saveLimit" value="Save Limit" />
+        <br>
+        <button id="deleteLimit">Delete</button>
+        <br>
+        <button id="cancelEdit">Cancel</button>
+      </form>
+      <div id="editMessage"></div>
+    </div>
+
+    <script type="module" src="popup.js"></script>
+    
+  </body>
+</html> 

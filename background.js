@@ -150,7 +150,7 @@ function blockTab(tabId) {
 }
 
 function checkAndResetDailyLimits() {
-  const today = new Date().toISOString().split("T")[0];
+  const today = new Date().toLocaleDateString('en-CA');
 
   chrome.storage.sync.get([TIME_LIMITS_KEY, "lastResetDate"], (data) => {
     const lastReset = data.lastResetDate;
